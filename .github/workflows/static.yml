@@ -52,7 +52,7 @@ jobs:
         run: mkdir release/wwwroot/app
       
       - name: Move to app folder 📁
-        run: mv release/wwwroot/* release/wwwroot/app
+        run: mv release/wwwroot/* !(app) release/wwwroot/app
 
       - name: ⬆️ Upload artifact
         uses: actions/upload-pages-artifact@v1
